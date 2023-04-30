@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A23A314C29FCDA570036833B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A314B29FCDA570036833B /* AppCoordinator.swift */; };
+		A23A314E29FCFCB10036833B /* Ext+Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A314D29FCFCB10036833B /* Ext+Dessert.swift */; };
+		A23A315629FE0B130036833B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A315529FE0B130036833B /* LoadingView.swift */; };
+		A2858B7429FA019E0089FEFC /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7329FA019E0089FEFC /* WebView.swift */; };
+		A2858B7629FA057C0089FEFC /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7529FA057C0089FEFC /* ThumbnailView.swift */; };
+		A2858B7829FA06930089FEFC /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7729FA06930089FEFC /* IngredientsView.swift */; };
+		A2858B7A29FA06D30089FEFC /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7929FA06D30089FEFC /* InstructionsView.swift */; };
+		A2A299DC29F998DA0022673A /* SampleTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299DB29F998DA0022673A /* SampleTestVC.swift */; };
+		A2A299E029F9E1220022673A /* InstructionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299DF29F9E1220022673A /* InstructionScreen.swift */; };
+		A2A299E229F9E13D0022673A /* DessertDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299E129F9E13D0022673A /* DessertDetailScreen.swift */; };
+		A2A299E429F9F1700022673A /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299E329F9F1700022673A /* DetailsViewModel.swift */; };
+		A2B2BC7929F85120005A9A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC7829F85120005A9A0E /* AppDelegate.swift */; };
+		A2B2BC7B29F85120005A9A0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC7A29F85120005A9A0E /* SceneDelegate.swift */; };
+		A2B2BC7D29F85120005A9A0E /* DessertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC7C29F85120005A9A0E /* DessertViewController.swift */; };
+		A2B2BC8229F85122005A9A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B2BC8129F85122005A9A0E /* Assets.xcassets */; };
+		A2B2BC8529F85122005A9A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B2BC8329F85122005A9A0E /* LaunchScreen.storyboard */; };
+		A2B2BC9029F85122005A9A0E /* Dessertopia_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC8F29F85122005A9A0E /* Dessertopia_Tests.swift */; };
+		A2B2BC9A29F85122005A9A0E /* Dessertopia_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC9929F85122005A9A0E /* Dessertopia_UITests.swift */; };
+		A2B2BC9C29F85122005A9A0E /* Dessertopia_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC9B29F85122005A9A0E /* Dessertopia_UITestsLaunchTests.swift */; };
+		A2B2BCB529F85C7C005A9A0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCB429F85C7C005A9A0E /* Constants.swift */; };
+		A2B2BCB729F85C90005A9A0E /* FetchDesserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCB629F85C90005A9A0E /* FetchDesserts.swift */; };
+		A2B2BCB929F85CB7005A9A0E /* ConstantsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCB829F85CB7005A9A0E /* ConstantsAPI.swift */; };
+		A2B2BCC129F85E53005A9A0E /* DessertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCC029F85E53005A9A0E /* DessertTableViewCell.swift */; };
+		A2B2BCC329F85E72005A9A0E /* DessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCC229F85E72005A9A0E /* DessertViewModel.swift */; };
+		A2B2BCC529F85EAA005A9A0E /* DessertsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCC429F85EAA005A9A0E /* DessertsList.swift */; };
+		A2B2BCC829F85ED8005A9A0E /* DessertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCC729F85ED8005A9A0E /* DessertDetails.swift */; };
+		A2B2BCCC29F88D5B005A9A0E /* FetchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BCCB29F88D5B005A9A0E /* FetchDetails.swift */; };
+		A2B2BD0F29F8DCEE005A9A0E /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BD0E29F8DCEE005A9A0E /* NetworkProtocol.swift */; };
+		A2BC2C8229FB20DF009ED1F2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A2BC2C8129FB20DF009ED1F2 /* SDWebImage */; };
+		A2BC2C8529FB2CA0009ED1F2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BC2C8429FB2CA0009ED1F2 /* NetworkError.swift */; };
+		A2ED512329FB863E006CDE22 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A2ED512229FB863E006CDE22 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2B2BC8C29F85122005A9A0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2B2BC6D29F85120005A9A0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B2BC7429F85120005A9A0E;
+			remoteInfo = "Dessertopia!";
+		};
+		A2B2BC9629F85122005A9A0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2B2BC6D29F85120005A9A0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B2BC7429F85120005A9A0E;
+			remoteInfo = "Dessertopia!";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A23A314B29FCDA570036833B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A23A314D29FCFCB10036833B /* Ext+Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Dessert.swift"; sourceTree = "<group>"; };
+		A23A314F29FD07A60036833B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A23A315529FE0B130036833B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		A2858B7329FA019E0089FEFC /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		A2858B7529FA057C0089FEFC /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		A2858B7729FA06930089FEFC /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
+		A2858B7929FA06D30089FEFC /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		A2A299DB29F998DA0022673A /* SampleTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTestVC.swift; sourceTree = "<group>"; };
+		A2A299DF29F9E1220022673A /* InstructionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionScreen.swift; sourceTree = "<group>"; };
+		A2A299E129F9E13D0022673A /* DessertDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailScreen.swift; sourceTree = "<group>"; };
+		A2A299E329F9F1700022673A /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		A2B2BC7529F85120005A9A0E /* Dessertopia!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dessertopia!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B2BC7829F85120005A9A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2B2BC7A29F85120005A9A0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A2B2BC7C29F85120005A9A0E /* DessertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewController.swift; sourceTree = "<group>"; };
+		A2B2BC8129F85122005A9A0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2B2BC8429F85122005A9A0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2B2BC8629F85122005A9A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2B2BC8B29F85122005A9A0E /* Dessertopia!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dessertopia!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B2BC8F29F85122005A9A0E /* Dessertopia_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessertopia_Tests.swift; sourceTree = "<group>"; };
+		A2B2BC9529F85122005A9A0E /* Dessertopia!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dessertopia!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B2BC9929F85122005A9A0E /* Dessertopia_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessertopia_UITests.swift; sourceTree = "<group>"; };
+		A2B2BC9B29F85122005A9A0E /* Dessertopia_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dessertopia_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2B2BCB429F85C7C005A9A0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A2B2BCB629F85C90005A9A0E /* FetchDesserts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDesserts.swift; sourceTree = "<group>"; };
+		A2B2BCB829F85CB7005A9A0E /* ConstantsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAPI.swift; sourceTree = "<group>"; };
+		A2B2BCC029F85E53005A9A0E /* DessertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertTableViewCell.swift; sourceTree = "<group>"; };
+		A2B2BCC229F85E72005A9A0E /* DessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel.swift; sourceTree = "<group>"; };
+		A2B2BCC429F85EAA005A9A0E /* DessertsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsList.swift; sourceTree = "<group>"; };
+		A2B2BCC729F85ED8005A9A0E /* DessertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetails.swift; sourceTree = "<group>"; };
+		A2B2BCCB29F88D5B005A9A0E /* FetchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDetails.swift; sourceTree = "<group>"; };
+		A2B2BD0E29F8DCEE005A9A0E /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		A2BC2C8429FB2CA0009ED1F2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2B2BC7229F85120005A9A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2ED512329FB863E006CDE22 /* SDWebImageSwiftUI in Frameworks */,
+				A2BC2C8229FB20DF009ED1F2 /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B2BC8829F85122005A9A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B2BC9229F85122005A9A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2B2BC6C29F85120005A9A0E = {
+			isa = PBXGroup;
+			children = (
+				A2B2BC7729F85120005A9A0E /* Dessertopia! */,
+				A2B2BC8E29F85122005A9A0E /* Dessertopia!Tests */,
+				A2B2BC9829F85122005A9A0E /* Dessertopia!UITests */,
+				A2B2BC7629F85120005A9A0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2B2BC7629F85120005A9A0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BC7529F85120005A9A0E /* Dessertopia!.app */,
+				A2B2BC8B29F85122005A9A0E /* Dessertopia!Tests.xctest */,
+				A2B2BC9529F85122005A9A0E /* Dessertopia!UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2B2BC7729F85120005A9A0E /* Dessertopia! */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BCB129F85B61005A9A0E /* Utilities */,
+				A2B2BCCD29F8AC67005A9A0E /* NetworkManager */,
+				A2B2BCA829F85999005A9A0E /* Models */,
+				A2B2BCAB29F859B4005A9A0E /* ViewModels */,
+				A2B2BCAA29F859AD005A9A0E /* Controllers */,
+				A2B2BCA929F859A5005A9A0E /* Views */,
+				A2B2BC7829F85120005A9A0E /* AppDelegate.swift */,
+				A2B2BC7A29F85120005A9A0E /* SceneDelegate.swift */,
+				A2B2BC8129F85122005A9A0E /* Assets.xcassets */,
+				A2B2BC8329F85122005A9A0E /* LaunchScreen.storyboard */,
+				A2B2BC8629F85122005A9A0E /* Info.plist */,
+				A23A314B29FCDA570036833B /* AppCoordinator.swift */,
+			);
+			path = "Dessertopia!";
+			sourceTree = "<group>";
+		};
+		A2B2BC8E29F85122005A9A0E /* Dessertopia!Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BC8F29F85122005A9A0E /* Dessertopia_Tests.swift */,
+				A2A299DB29F998DA0022673A /* SampleTestVC.swift */,
+			);
+			path = "Dessertopia!Tests";
+			sourceTree = "<group>";
+		};
+		A2B2BC9829F85122005A9A0E /* Dessertopia!UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BC9929F85122005A9A0E /* Dessertopia_UITests.swift */,
+				A2B2BC9B29F85122005A9A0E /* Dessertopia_UITestsLaunchTests.swift */,
+			);
+			path = "Dessertopia!UITests";
+			sourceTree = "<group>";
+		};
+		A2B2BCA829F85999005A9A0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BCC429F85EAA005A9A0E /* DessertsList.swift */,
+				A2B2BCC729F85ED8005A9A0E /* DessertDetails.swift */,
+				A23A314D29FCFCB10036833B /* Ext+Dessert.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2B2BCA929F859A5005A9A0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A23A314F29FD07A60036833B /* LoadingView.swift */,
+				A2B2BCC029F85E53005A9A0E /* DessertTableViewCell.swift */,
+				A2858B7329FA019E0089FEFC /* WebView.swift */,
+				A2B2BCAD29F859D8005A9A0E /* SwiftUIViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2B2BCAA29F859AD005A9A0E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BC7C29F85120005A9A0E /* DessertViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A2B2BCAB29F859B4005A9A0E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BCC229F85E72005A9A0E /* DessertViewModel.swift */,
+				A2A299E329F9F1700022673A /* DetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2B2BCAD29F859D8005A9A0E /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				A2A299E129F9E13D0022673A /* DessertDetailScreen.swift */,
+				A2858B7529FA057C0089FEFC /* ThumbnailView.swift */,
+				A2858B7729FA06930089FEFC /* IngredientsView.swift */,
+				A2858B7929FA06D30089FEFC /* InstructionsView.swift */,
+				A2A299DF29F9E1220022673A /* InstructionScreen.swift */,
+				A23A315529FE0B130036833B /* LoadingView.swift */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		A2B2BCB129F85B61005A9A0E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BCB429F85C7C005A9A0E /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A2B2BCCD29F8AC67005A9A0E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BD0E29F8DCEE005A9A0E /* NetworkProtocol.swift */,
+				A2B2BCB629F85C90005A9A0E /* FetchDesserts.swift */,
+				A2B2BCCB29F88D5B005A9A0E /* FetchDetails.swift */,
+				A2B2BCB829F85CB7005A9A0E /* ConstantsAPI.swift */,
+				A2BC2C8429FB2CA0009ED1F2 /* NetworkError.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2B2BC7429F85120005A9A0E /* Dessertopia! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B2BC9F29F85122005A9A0E /* Build configuration list for PBXNativeTarget "Dessertopia!" */;
+			buildPhases = (
+				A2B2BC7129F85120005A9A0E /* Sources */,
+				A2B2BC7229F85120005A9A0E /* Frameworks */,
+				A2B2BC7329F85120005A9A0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dessertopia!";
+			packageProductDependencies = (
+				A2BC2C8129FB20DF009ED1F2 /* SDWebImage */,
+				A2ED512229FB863E006CDE22 /* SDWebImageSwiftUI */,
+			);
+			productName = "Dessertopia!";
+			productReference = A2B2BC7529F85120005A9A0E /* Dessertopia!.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2B2BC8A29F85122005A9A0E /* Dessertopia!Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B2BCA229F85122005A9A0E /* Build configuration list for PBXNativeTarget "Dessertopia!Tests" */;
+			buildPhases = (
+				A2B2BC8729F85122005A9A0E /* Sources */,
+				A2B2BC8829F85122005A9A0E /* Frameworks */,
+				A2B2BC8929F85122005A9A0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2B2BC8D29F85122005A9A0E /* PBXTargetDependency */,
+			);
+			name = "Dessertopia!Tests";
+			productName = "Dessertopia!Tests";
+			productReference = A2B2BC8B29F85122005A9A0E /* Dessertopia!Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2B2BC9429F85122005A9A0E /* Dessertopia!UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B2BCA529F85122005A9A0E /* Build configuration list for PBXNativeTarget "Dessertopia!UITests" */;
+			buildPhases = (
+				A2B2BC9129F85122005A9A0E /* Sources */,
+				A2B2BC9229F85122005A9A0E /* Frameworks */,
+				A2B2BC9329F85122005A9A0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2B2BC9729F85122005A9A0E /* PBXTargetDependency */,
+			);
+			name = "Dessertopia!UITests";
+			productName = "Dessertopia!UITests";
+			productReference = A2B2BC9529F85122005A9A0E /* Dessertopia!UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2B2BC6D29F85120005A9A0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					A2B2BC7429F85120005A9A0E = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					A2B2BC8A29F85122005A9A0E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A2B2BC7429F85120005A9A0E;
+					};
+					A2B2BC9429F85122005A9A0E = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A2B2BC7429F85120005A9A0E;
+					};
+				};
+			};
+			buildConfigurationList = A2B2BC7029F85120005A9A0E /* Build configuration list for PBXProject "Dessertopia!" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2B2BC6C29F85120005A9A0E;
+			packageReferences = (
+				A2BC2C8029FB20DF009ED1F2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				A2ED512129FB863E006CDE22 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
+			productRefGroup = A2B2BC7629F85120005A9A0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2B2BC7429F85120005A9A0E /* Dessertopia! */,
+				A2B2BC8A29F85122005A9A0E /* Dessertopia!Tests */,
+				A2B2BC9429F85122005A9A0E /* Dessertopia!UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2B2BC7329F85120005A9A0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B2BC8529F85122005A9A0E /* LaunchScreen.storyboard in Resources */,
+				A2B2BC8229F85122005A9A0E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B2BC8929F85122005A9A0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B2BC9329F85122005A9A0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2B2BC7129F85120005A9A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B2BCB729F85C90005A9A0E /* FetchDesserts.swift in Sources */,
+				A2A299E229F9E13D0022673A /* DessertDetailScreen.swift in Sources */,
+				A2B2BCC829F85ED8005A9A0E /* DessertDetails.swift in Sources */,
+				A2858B7A29FA06D30089FEFC /* InstructionsView.swift in Sources */,
+				A2B2BCC329F85E72005A9A0E /* DessertViewModel.swift in Sources */,
+				A23A315629FE0B130036833B /* LoadingView.swift in Sources */,
+				A2A299E029F9E1220022673A /* InstructionScreen.swift in Sources */,
+				A23A314C29FCDA570036833B /* AppCoordinator.swift in Sources */,
+				A2B2BCC129F85E53005A9A0E /* DessertTableViewCell.swift in Sources */,
+				A2B2BCB529F85C7C005A9A0E /* Constants.swift in Sources */,
+				A2B2BCC529F85EAA005A9A0E /* DessertsList.swift in Sources */,
+				A2BC2C8529FB2CA0009ED1F2 /* NetworkError.swift in Sources */,
+				A2858B7629FA057C0089FEFC /* ThumbnailView.swift in Sources */,
+				A2B2BD0F29F8DCEE005A9A0E /* NetworkProtocol.swift in Sources */,
+				A2858B7829FA06930089FEFC /* IngredientsView.swift in Sources */,
+				A23A314E29FCFCB10036833B /* Ext+Dessert.swift in Sources */,
+				A2B2BCCC29F88D5B005A9A0E /* FetchDetails.swift in Sources */,
+				A2B2BC7D29F85120005A9A0E /* DessertViewController.swift in Sources */,
+				A2B2BC7929F85120005A9A0E /* AppDelegate.swift in Sources */,
+				A2B2BCB929F85CB7005A9A0E /* ConstantsAPI.swift in Sources */,
+				A2858B7429FA019E0089FEFC /* WebView.swift in Sources */,
+				A2B2BC7B29F85120005A9A0E /* SceneDelegate.swift in Sources */,
+				A2A299E429F9F1700022673A /* DetailsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B2BC8729F85122005A9A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A299DC29F998DA0022673A /* SampleTestVC.swift in Sources */,
+				A2B2BC9029F85122005A9A0E /* Dessertopia_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B2BC9129F85122005A9A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B2BC9C29F85122005A9A0E /* Dessertopia_UITestsLaunchTests.swift in Sources */,
+				A2B2BC9A29F85122005A9A0E /* Dessertopia_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2B2BC8D29F85122005A9A0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2B2BC7429F85120005A9A0E /* Dessertopia! */;
+			targetProxy = A2B2BC8C29F85122005A9A0E /* PBXContainerItemProxy */;
+		};
+		A2B2BC9729F85122005A9A0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2B2BC7429F85120005A9A0E /* Dessertopia! */;
+			targetProxy = A2B2BC9629F85122005A9A0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2B2BC8329F85122005A9A0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2B2BC8429F85122005A9A0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2B2BC9D29F85122005A9A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2B2BC9E29F85122005A9A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2B2BCA029F85122005A9A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99JS49DL2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dessertopia!/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dessertopia!";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samir-Pandey.Dessertopia-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2B2BCA129F85122005A9A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99JS49DL2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dessertopia!/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dessertopia!";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samir-Pandey.Dessertopia-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2B2BCA329F85122005A9A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99JS49DL2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samir-Pandey.Dessertopia-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dessertopia!.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dessertopia!";
+			};
+			name = Debug;
+		};
+		A2B2BCA429F85122005A9A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99JS49DL2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samir-Pandey.Dessertopia-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dessertopia!.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Dessertopia!";
+			};
+			name = Release;
+		};
+		A2B2BCA629F85122005A9A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99JS49DL2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samir-Pandey.Dessertopia-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dessertopia!";
+			};
+			name = Debug;
+		};
+		A2B2BCA729F85122005A9A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99JS49DL2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Samir-Pandey.Dessertopia-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dessertopia!";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2B2BC7029F85120005A9A0E /* Build configuration list for PBXProject "Dessertopia!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B2BC9D29F85122005A9A0E /* Debug */,
+				A2B2BC9E29F85122005A9A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B2BC9F29F85122005A9A0E /* Build configuration list for PBXNativeTarget "Dessertopia!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B2BCA029F85122005A9A0E /* Debug */,
+				A2B2BCA129F85122005A9A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B2BCA229F85122005A9A0E /* Build configuration list for PBXNativeTarget "Dessertopia!Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B2BCA329F85122005A9A0E /* Debug */,
+				A2B2BCA429F85122005A9A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B2BCA529F85122005A9A0E /* Build configuration list for PBXNativeTarget "Dessertopia!UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B2BCA629F85122005A9A0E /* Debug */,
+				A2B2BCA729F85122005A9A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2BC2C8029FB20DF009ED1F2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A2ED512129FB863E006CDE22 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2BC2C8129FB20DF009ED1F2 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2BC2C8029FB20DF009ED1F2 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		A2ED512229FB863E006CDE22 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2ED512129FB863E006CDE22 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A2B2BC6D29F85120005A9A0E /* Project object */;
+}
