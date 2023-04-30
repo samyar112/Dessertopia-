@@ -11,10 +11,8 @@ import SwiftUI
 @MainActor
 class DetailsViewModel: ObservableObject {
     
-    @Published var isPlayButtonTapped = false
     @Published var isButtonTapped = false
     @Published var isErrorShown = false
-    @Published var isShowingSheet = false
     @Published var isLoading = false
     
     @Published var dessert: [Dessert] = []
@@ -23,13 +21,14 @@ class DetailsViewModel: ObservableObject {
    
     func fetchMealDetailswith(mealId: String) {
         DispatchQueue.main.async { [weak self] in
-            self?.isLoading = true
+            guard let self = self else { return }
+            self.isLoading = true
         }
         
         networkManager.fetchDetails(withId: mealId) { [weak self] result in
             switch result {
             case .success(let dessert):
-                
+                // used map to transform only the array that's needed.
                 let desserts = dessert.meals.map {
                     Dessert(idMeal: $0.idMeal,
                             strMeal: $0.strMeal,
@@ -38,15 +37,17 @@ class DetailsViewModel: ObservableObject {
                             strYoutube: $0.strYoutube,
                             ingredients: $0.ingredients)
                 }
-                
+                //delayed the call for loading indicator for easy user experience. 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [ weak self ] in
-                    self?.isLoading = false
-                    self?.dessert = desserts
+                    guard let self = self else { return }
+                    self.isLoading = false
+                    self.dessert = desserts
                 }
                 
             case .failure( _):
                 DispatchQueue.main.async { [ weak self ] in
-                    self?.isErrorShown = true
+                    guard let self = self else { return }
+                    self.isErrorShown = true
                 }
             }
         }

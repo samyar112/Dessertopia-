@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A23A314C29FCDA570036833B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A314B29FCDA570036833B /* AppCoordinator.swift */; };
 		A23A314E29FCFCB10036833B /* Ext+Dessert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A314D29FCFCB10036833B /* Ext+Dessert.swift */; };
 		A23A315629FE0B130036833B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A315529FE0B130036833B /* LoadingView.swift */; };
-		A2858B7429FA019E0089FEFC /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7329FA019E0089FEFC /* WebView.swift */; };
 		A2858B7629FA057C0089FEFC /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7529FA057C0089FEFC /* ThumbnailView.swift */; };
 		A2858B7829FA06930089FEFC /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7729FA06930089FEFC /* IngredientsView.swift */; };
 		A2858B7A29FA06D30089FEFC /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2858B7929FA06D30089FEFC /* InstructionsView.swift */; };
 		A2A299DC29F998DA0022673A /* SampleTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299DB29F998DA0022673A /* SampleTestVC.swift */; };
-		A2A299E029F9E1220022673A /* InstructionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299DF29F9E1220022673A /* InstructionScreen.swift */; };
 		A2A299E229F9E13D0022673A /* DessertDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299E129F9E13D0022673A /* DessertDetailScreen.swift */; };
 		A2A299E429F9F1700022673A /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A299E329F9F1700022673A /* DetailsViewModel.swift */; };
 		A2B2BC7929F85120005A9A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC7829F85120005A9A0E /* AppDelegate.swift */; };
@@ -58,16 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A23A314B29FCDA570036833B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A23A314D29FCFCB10036833B /* Ext+Dessert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Dessert.swift"; sourceTree = "<group>"; };
-		A23A314F29FD07A60036833B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A23A315529FE0B130036833B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		A2858B7329FA019E0089FEFC /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		A2858B7529FA057C0089FEFC /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		A2858B7729FA06930089FEFC /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		A2858B7929FA06D30089FEFC /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		A2A299DB29F998DA0022673A /* SampleTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTestVC.swift; sourceTree = "<group>"; };
-		A2A299DF29F9E1220022673A /* InstructionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionScreen.swift; sourceTree = "<group>"; };
 		A2A299E129F9E13D0022673A /* DessertDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailScreen.swift; sourceTree = "<group>"; };
 		A2A299E329F9F1700022673A /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		A2B2BC7529F85120005A9A0E /* Dessertopia!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dessertopia!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +148,6 @@
 				A2B2BC8129F85122005A9A0E /* Assets.xcassets */,
 				A2B2BC8329F85122005A9A0E /* LaunchScreen.storyboard */,
 				A2B2BC8629F85122005A9A0E /* Info.plist */,
-				A23A314B29FCDA570036833B /* AppCoordinator.swift */,
 			);
 			path = "Dessertopia!";
 			sourceTree = "<group>";
@@ -191,9 +183,7 @@
 		A2B2BCA929F859A5005A9A0E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A23A314F29FD07A60036833B /* LoadingView.swift */,
 				A2B2BCC029F85E53005A9A0E /* DessertTableViewCell.swift */,
-				A2858B7329FA019E0089FEFC /* WebView.swift */,
 				A2B2BCAD29F859D8005A9A0E /* SwiftUIViews */,
 			);
 			path = Views;
@@ -223,7 +213,6 @@
 				A2858B7529FA057C0089FEFC /* ThumbnailView.swift */,
 				A2858B7729FA06930089FEFC /* IngredientsView.swift */,
 				A2858B7929FA06D30089FEFC /* InstructionsView.swift */,
-				A2A299DF29F9E1220022673A /* InstructionScreen.swift */,
 				A23A315529FE0B130036833B /* LoadingView.swift */,
 			);
 			path = SwiftUIViews;
@@ -393,8 +382,6 @@
 				A2858B7A29FA06D30089FEFC /* InstructionsView.swift in Sources */,
 				A2B2BCC329F85E72005A9A0E /* DessertViewModel.swift in Sources */,
 				A23A315629FE0B130036833B /* LoadingView.swift in Sources */,
-				A2A299E029F9E1220022673A /* InstructionScreen.swift in Sources */,
-				A23A314C29FCDA570036833B /* AppCoordinator.swift in Sources */,
 				A2B2BCC129F85E53005A9A0E /* DessertTableViewCell.swift in Sources */,
 				A2B2BCB529F85C7C005A9A0E /* Constants.swift in Sources */,
 				A2B2BCC529F85EAA005A9A0E /* DessertsList.swift in Sources */,
@@ -407,7 +394,6 @@
 				A2B2BC7D29F85120005A9A0E /* DessertViewController.swift in Sources */,
 				A2B2BC7929F85120005A9A0E /* AppDelegate.swift in Sources */,
 				A2B2BCB929F85CB7005A9A0E /* ConstantsAPI.swift in Sources */,
-				A2858B7429FA019E0089FEFC /* WebView.swift in Sources */,
 				A2B2BC7B29F85120005A9A0E /* SceneDelegate.swift in Sources */,
 				A2A299E429F9F1700022673A /* DetailsViewModel.swift in Sources */,
 			);
@@ -508,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -562,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -589,7 +575,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +606,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

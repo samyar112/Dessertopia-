@@ -18,7 +18,7 @@ class DessertViewModel {
             }
         }
     }
-    
+    // Closures to update Controller.
     var didUpdateData: (() -> Void)?
     var onErrorMessage: ((NetworkError) -> Void)?
     
@@ -27,6 +27,7 @@ class DessertViewModel {
             switch result {
             case .success(let dessert):
                 DispatchQueue.main.async {
+                    // to sort the array alphabetically. 
                     self?.desserts = dessert.meals.sorted(by: { $0.strMeal < $1.strMeal })
                 }
                 

@@ -41,7 +41,7 @@ class DessertTableViewCell: UITableViewCell {
     
     // MARK: - Helpers
     
-    func configureUI() {
+    private func configureUI() {
         contentView.addSubview(dessertImageView)
         contentView.addSubview(nameLabel)
         
@@ -61,8 +61,9 @@ class DessertTableViewCell: UITableViewCell {
         ])
     }
     
-    func configureCell(with meal: Desserts) {
+     func configureCell(with meal: Desserts) {
         nameLabel.text = meal.strMeal
+        //Using SDWebImage to load image from URL.
         dessertImageView.sd_setImage(with: URL(string: meal.strMealThumb),
                                      placeholderImage: UIImage(named: TableCellConstant.placeHolderImage),
                                      options: .continueInBackground)

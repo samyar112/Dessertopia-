@@ -16,13 +16,12 @@ class DessertViewController: UIViewController {
         tableView.register(DessertTableViewCell.self, forCellReuseIdentifier: DessertCellReuseId.cellId)
         return tableView
     }()
- //   let loadingView = UIHostingController(rootView: LoadingView())
-    var dessertViewModel = DessertViewModel()
+    
+    private let dessertViewModel = DessertViewModel()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = DessertVCConstant.title
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -37,18 +36,27 @@ class DessertViewController: UIViewController {
     // MARK: - Helpers
     
     private func loadData() {
+        //Loading Indicator
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.startAnimating()
+        tableView.backgroundView = activityIndicator
+        
         self.dessertViewModel.fetchData()
-   //     present(loadingView,animated: true)
         self.dessertViewModel.didUpdateData = { [weak self] in
             guard let self = self else { return }
-            DispatchQueue.main.async {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.title = DessertVCConstant.title
                 self.tableView.reloadData()
+                activityIndicator.stopAnimating()
+                self.tableView.backgroundView = nil
             }
         }
         
         self.dessertViewModel.onErrorMessage = { [weak self] _ in
             guard let self = self else { return }
             DispatchQueue.main.async {
+                //showing alert when network fails so user can retry or connect to internet.
                 self.showErrorAlert()
             }
         }
@@ -59,6 +67,16 @@ class DessertViewController: UIViewController {
         
         tableView.frame = view.bounds
         tableView.rowHeight = CGFloat(DessertVCConstant.rowHeight)
+    }
+    
+    private func showErrorAlert() {
+        let alertController = UIAlertController(title: nil , message: ErrorAlertConstant.alertMessage , preferredStyle: .alert)
+        let retryAction = UIAlertAction(title: ErrorAlertConstant.retryButton , style: .default) { [ weak self ] _ in
+            guard let self = self else { return }
+            self.dessertViewModel.fetchData()
+        }
+        alertController.addAction(retryAction)
+        present(alertController, animated: true)
     }
 }
 
@@ -83,21 +101,9 @@ extension DessertViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mealId = self.dessertViewModel.desserts[indexPath.row].idMeal
+        // Using UIHostingController to navigate to SwiftUI View.
         let detailVC = UIHostingController(rootView: DessertDetailScreen(mealId: mealId))
         navigationController?.pushViewController(detailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-extension DessertViewController {
-    
-    private func showErrorAlert() {
-        let alertController = UIAlertController(title: nil , message: ErrorAlertConstant.alertMessage , preferredStyle: .alert)
-        let retryAction = UIAlertAction(title: ErrorAlertConstant.retryButton , style: .default) { [ weak self ] _ in
-            guard let self = self else { return }
-            self.dessertViewModel.fetchData()
-        }
-        alertController.addAction(retryAction)
-        present(alertController, animated: true)
     }
 }

@@ -9,32 +9,31 @@ import SwiftUI
 
 struct DessertDetailScreen: View {
     @StateObject private var detailViewModel = DetailsViewModel()
-   
+    
     let mealId: String?
     
     var body: some View {
-        
-        ScrollView {
-            ZStack {
-                VStack {
+        ZStack {
+            ScrollView {
+                LazyVStack {
                     ForEach(detailViewModel.dessert, id: \.self) { meal in
-                        ThumbnailView(mealId: mealId)
+                        ThumbnailView()
+                        Divider()
                         InstructionsView()
                         IngredientsView()
                     }
-                    if detailViewModel.isLoading {
-                       LoadingView()
-                    }
                 }
+                // injecting this as parent view here. So, all child will have access.
                 .environmentObject(detailViewModel)
-                
                 .alert(isPresented: $detailViewModel.isErrorShown, content: {
                     errorAlert()
                 })
+                .onAppear {
+                    detailViewModel.fetchMealDetailswith(mealId: mealId ?? EmptyConstant.empty)
+                }
             }
-            .onAppear {
-                 
-                detailViewModel.fetchMealDetailswith(mealId: mealId ?? EmptyConstant.empty)
+            if detailViewModel.isLoading {
+                LoadingView()
             }
         }
     }
@@ -49,30 +48,8 @@ struct DessertDetailScreen: View {
     }
 }
 
-
-
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DessertDetailScreen(mealId: "53049")
-    }
-}
-
-struct LoadingView: View {
-    var body: some View {
-        ZStack {
-            Color(.systemBackground)
-                .ignoresSafeArea()
-            ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint:
-                        .blue))
-                .scaleEffect(3)
-                .padding()
-        }
-    }
-}
-
-struct LoadingView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadingView()
     }
 }

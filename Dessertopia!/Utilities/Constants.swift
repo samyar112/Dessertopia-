@@ -5,15 +5,14 @@
 //  Created by Samir Pandey on 4/25/23.
 //
 
-import UIKit
+import Foundation
 
-    // TableView ReuseIdentifier
 enum DessertCellReuseId {
-        static let cellId = "dessertCell"
-    }
-       
+    static let cellId = "dessertCell"
+}
+
 enum DessertVCConstant {
-    static let title = "What's for Dessert!"
+    static let title = "What's for Dessert?"
     static let fatalErrorAtCell = "Failed to dequeue DessertTableViewCell"
     static let rowHeight = 100
 }
@@ -32,22 +31,18 @@ enum TableCellConstant {
 enum ThumbnailConstants {
     static let youtubeURL = "https://www.youtube.com/"
     static let playImage = "play.circle.fill"
-  
-    
-   
-    
 }
 
 enum IngredientConstant {
     static let title = "Ingredients & Measurements"
     static let defaultString = "Name not Available"
-    
-    
 }
 
 enum InstructionConstant {
     static let title = "Instructions"
     static let defaultString = "Don't have any instruction at this time."
+    static let buttonUp = "chevron.up.circle.fill"
+    static let buttonDown = "chevron.down.circle.fill"
 }
 
 enum EmptyConstant {

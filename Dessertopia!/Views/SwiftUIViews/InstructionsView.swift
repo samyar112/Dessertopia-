@@ -9,29 +9,37 @@ import SwiftUI
 
 struct InstructionsView: View {
     @EnvironmentObject private var detailViewModel: DetailsViewModel
+    
     var body: some View {
-        VStack {
+        LazyVStack {
             ForEach(detailViewModel.dessert, id: \.self) { meal in
-                Text(meal.strMeal ?? InstructionConstant.defaultString)
-                    .fontWeight(.heavy)
+                
+                Text(meal.strInstructions ?? InstructionConstant.defaultString )
                     .foregroundColor(.black)
-                    .font(.system(size: 25))
-                    .padding()
-                Divider()
-                Button(action: {
-                    self.detailViewModel.isButtonTapped = true
-                }) {
-                    Text(InstructionConstant.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(20)
-                }
+                    .lineLimit(detailViewModel.isButtonTapped ? nil : 3)
+                    .fixedSize(horizontal: false, vertical: detailViewModel.isButtonTapped)
+                    .onTapGesture(count: 2) {
+                        detailViewModel.isButtonTapped.toggle()
+                    }
             }
-        }
-        .sheet(isPresented: $detailViewModel.isButtonTapped) {
-            InstructionScreen()
+            .overlay(alignment: .bottomTrailing) {
+                Button(action: {
+                    detailViewModel.isButtonTapped.toggle()
+                }) {
+                    Image(systemName: detailViewModel.isButtonTapped ? InstructionConstant.buttonUp : InstructionConstant.buttonDown)
+                        .foregroundColor(.black)
+                        .imageScale(.large)
+                        .offset(x: 10, y: 25)
+                }
+                .buttonStyle(.plain)
+            }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .foregroundColor(.gray.opacity(0.4))
+            )
+            .padding(.horizontal, 12)
+            .padding(.top, 30)
         }
     }
 }

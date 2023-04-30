@@ -9,14 +9,14 @@ import SwiftUI
 
 struct IngredientsView: View {
     
-    @EnvironmentObject private var detailVM: DetailsViewModel
+    @EnvironmentObject private var detailViewModel: DetailsViewModel
     var body: some View {
         
         Text(IngredientConstant.title)
             .font(.system(size: 20))
             .fontWeight(.bold)
-        
-        ForEach(detailVM.dessert.flatMap { $0.ingredients ?? [] }, id: \.self) { ingredient in
+        //flat map is used to create a flattened array of all ingredients from the meals array
+        ForEach(detailViewModel.dessert.flatMap { $0.ingredients ?? [] }, id: \.self) { ingredient in
             VStack {
                 HStack(alignment: .firstTextBaseline) {
                     Circle()
