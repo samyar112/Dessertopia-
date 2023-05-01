@@ -16,6 +16,10 @@ class DetailsViewModel: ObservableObject {
     
     @Published var dessert: [Dessert] = []
     
+    var flattenedIngredients: [Ingredients] {
+            dessert.flatMap { $0.ingredients }
+        }
+    
     private let networkManager: NetworkProtocol
     
     init(networkManager: NetworkProtocol = NetworkManager()) {

@@ -11,13 +11,11 @@ struct IngredientsView: View {
     
     @EnvironmentObject private var detailViewModel: DetailsViewModel
     var body: some View {
-        
-        Text(IngredientConstant.title)
-            .font(.system(size: 20))
-            .fontWeight(.bold)
-        //flat map is used to create a flattened array of all ingredients from the meals array
-        ForEach(detailViewModel.dessert.flatMap { $0.ingredients ?? [] }, id: \.self) { ingredient in
-            VStack {
+        LazyVStack {
+            Text(IngredientConstant.title)
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+            ForEach(detailViewModel.flattenedIngredients, id: \.id) { ingredient in
                 HStack(alignment: .firstTextBaseline) {
                     Circle()
                         .foregroundColor(.black)

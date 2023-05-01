@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WebKit
 import SDWebImageSwiftUI
 
 struct ThumbnailView: View {

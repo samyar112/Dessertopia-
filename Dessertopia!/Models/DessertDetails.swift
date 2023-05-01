@@ -11,17 +11,17 @@ struct MealsResponse: Decodable, Hashable {
     let meals: [Dessert]
 }
 
-struct Ingredients: Decodable, Hashable {
+struct Ingredients: Decodable, Identifiable, Hashable {
+    var id = UUID()
     let name: String
     let measure: String
 }
 
-struct Dessert: Decodable, Identifiable, Hashable {
-    let id = UUID()
+struct Dessert: Decodable, Hashable {
     let idMeal: String?
     let strMeal: String?
     let strInstructions: String?
     let strMealThumb: String
     let strYoutube: String
-    let ingredients: [Ingredients]?
+    let ingredients: [Ingredients]
 }
