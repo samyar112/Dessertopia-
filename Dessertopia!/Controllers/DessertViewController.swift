@@ -17,7 +17,19 @@ class DessertViewController: UIViewController {
         return tableView
     }()
     
-    private let dessertViewModel = DessertViewModel()
+     private let dessertViewModel: DessertViewModel
+ 
+        // MARK: - Initializers
+        
+        init(dessertViewModel: DessertViewModel) {
+            self.dessertViewModel = dessertViewModel
+          
+            super.init(nibName: nil, bundle: nil)
+        }
+        
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -41,7 +53,7 @@ class DessertViewController: UIViewController {
         activityIndicator.startAnimating()
         tableView.backgroundView = activityIndicator
         
-        self.dessertViewModel.fetchData()
+        self.dessertViewModel.fetchDesserts()
         self.dessertViewModel.didUpdateData = { [weak self] in
             guard let self = self else { return }
             
@@ -73,7 +85,7 @@ class DessertViewController: UIViewController {
         let alertController = UIAlertController(title: nil , message: ErrorAlertConstant.alertMessage , preferredStyle: .alert)
         let retryAction = UIAlertAction(title: ErrorAlertConstant.retryButton , style: .default) { [ weak self ] _ in
             guard let self = self else { return }
-            self.dessertViewModel.fetchData()
+            self.dessertViewModel.fetchDesserts()
         }
         alertController.addAction(retryAction)
         present(alertController, animated: true)

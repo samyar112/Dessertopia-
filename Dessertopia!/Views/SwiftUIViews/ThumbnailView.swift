@@ -12,11 +12,11 @@ import SDWebImageSwiftUI
 struct ThumbnailView: View {
     
     @EnvironmentObject private var detailViewModel: DetailsViewModel
-   private let bounds = UIScreen.main.bounds
+    private let bounds = UIScreen.main.bounds
     
     var body: some View {
         LazyVStack() {
-            ForEach(detailViewModel.dessert, id: \.id) { meal in
+            ForEach(detailViewModel.dessert, id: \.self) { meal in
                 if !meal.strMealThumb.isEmpty {
                     WebImage(url: URL(string: meal.strMealThumb))
                         .resizable()

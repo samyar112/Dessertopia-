@@ -9,7 +9,12 @@ import UIKit
 
 class DessertViewModel {
     
-    private var networkManager = NetworkManager()
+    let networkManager: NetworkProtocol
+    
+    init(networkManager: NetworkProtocol) {
+        self.networkManager = networkManager
+    }
+    //  private var networkManager = NetworkManager()
     var desserts: [Desserts] = [] {
         didSet {
             // Notify when the desserts array is updated
@@ -22,7 +27,7 @@ class DessertViewModel {
     var didUpdateData: (() -> Void)?
     var onErrorMessage: ((NetworkError) -> Void)?
     
-    func fetchData() {
+    func fetchDesserts() {
         networkManager.fetchDesserts() { [weak self] result in
             switch result {
             case .success(let dessert):

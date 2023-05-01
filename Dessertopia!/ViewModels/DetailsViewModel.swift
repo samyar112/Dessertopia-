@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-@MainActor
 class DetailsViewModel: ObservableObject {
     
     @Published var isButtonTapped = false
@@ -17,8 +16,12 @@ class DetailsViewModel: ObservableObject {
     
     @Published var dessert: [Dessert] = []
     
-    private var networkManager = NetworkManager()
-   
+    private let networkManager: NetworkProtocol
+    
+    init(networkManager: NetworkProtocol = NetworkManager()) {
+        self.networkManager = networkManager
+    }
+    
     func fetchMealDetailswith(mealId: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
