@@ -12,8 +12,7 @@ struct InstructionsView: View {
     
     var body: some View {
         LazyVStack {
-            ForEach(detailViewModel.dessert, id: \.self) { meal in
-                
+            ForEach(detailViewModel.dessert) { meal in
                 Text(meal.strInstructions ?? InstructionConstant.defaultString )
                     .foregroundColor(.black)
                     .lineLimit(detailViewModel.isButtonTapped ? nil : 3)

@@ -17,7 +17,8 @@ struct Ingredients: Decodable, Identifiable, Hashable {
     let measure: String
 }
 
-struct Dessert: Decodable, Hashable {
+struct Dessert: Decodable, Identifiable, Hashable {
+    var id = UUID()
     let idMeal: String?
     let strMeal: String?
     let strInstructions: String?

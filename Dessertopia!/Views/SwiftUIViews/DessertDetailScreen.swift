@@ -16,7 +16,7 @@ struct DessertDetailScreen: View {
         ZStack {
             ScrollView {
                 LazyVStack {
-                    ForEach(detailViewModel.dessert, id: \.self) { meal in
+                    ForEach(detailViewModel.dessert) { meal in
                         ThumbnailView()
                         Divider()
                         InstructionsView()

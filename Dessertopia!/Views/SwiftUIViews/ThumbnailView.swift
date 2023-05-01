@@ -15,7 +15,7 @@ struct ThumbnailView: View {
     
     var body: some View {
         LazyVStack() {
-            ForEach(detailViewModel.dessert, id: \.self) { meal in
+            ForEach(detailViewModel.dessert) { meal in
                 if !meal.strMealThumb.isEmpty {
                     WebImage(url: URL(string: meal.strMealThumb))
                         .resizable()

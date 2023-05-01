@@ -15,7 +15,7 @@ struct IngredientsView: View {
             Text(IngredientConstant.title)
                 .font(.system(size: 20))
                 .fontWeight(.bold)
-            ForEach(detailViewModel.flattenedIngredients, id: \.id) { ingredient in
+            ForEach(detailViewModel.flattenedIngredients) { ingredient in
                 HStack(alignment: .firstTextBaseline) {
                     Circle()
                         .foregroundColor(.black)
