@@ -6,11 +6,11 @@
 Welcome to the Dessertopia- A recipe app for Desserts! This app allows users to browse and create their favorite dessert recipes. It consists of two screens - the first screen is built with UIKit, and the second screen is built with SwiftUI.
 
 Features
-MVVM architecture with Dependency Injection design pattern
+MVVM architecture with Dependency Injection design pattern 
 All programmatic user interface
 UIKit and SwiftUI 
 Activity Indicators for improved user experience.
-Error alert when there's no internet or network failure
+Error alert when there's no internet or network failure.
 Unit Testing
 
 
